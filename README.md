@@ -1,8 +1,4 @@
 # SpringApiAgent
-rest api agent template
-
-How to run the program.
-
 
 ## Table of Contents (Optional)
 
@@ -42,16 +38,19 @@ How to run the program.
 ### Clone
 - Install git first.
 - Then clone the project
+
+```shell
 - git clone https://github.com/tharangar/SpringApiAgent.git
+```
 
 ### Setup
-- Create a database "rest" in your localdatabase
+- Create a database "rest" in your localdata base
 - Create a user with privileges to this database username "rest" and password "rest".
 - use the rest.sql database dump file for importing the database to your local machine.
 - mysql -u root -psomepassword rest < rest.sql
 
 - Download and install maven first.
-- changed to the cloned directory
+- change to the cloned directory
 - mvn compile
 - mvn test
 - mvn package
@@ -92,10 +91,4 @@ After import the project build and run on tomcat web server.
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 ©
 
-
-> update and install this package first
-
-```shell
-$ brew update
-$ brew install fvcproductions
 
