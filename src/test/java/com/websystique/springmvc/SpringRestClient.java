@@ -17,7 +17,7 @@ import com.websystique.springmvc.model.User;
  
 public class SpringRestClient {
  
-    public static final String REST_SERVICE_URI = "http://localhost:8080/SecureRESTApiWithBasicAuthentication";
+    public static final String REST_SERVICE_URI = "http://localhost:8080/XCore";
  
     /*
      * Add HTTP Authorization header, using Basic-Authentication to send user-credentials.

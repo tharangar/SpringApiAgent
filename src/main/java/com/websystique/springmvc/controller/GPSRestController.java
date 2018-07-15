@@ -71,18 +71,7 @@ public class GPSRestController {
     }
     
     
-    @RequestMapping(value = "/loc/{imie}/{latitude}/{longitude}/{time}", method = RequestMethod.GET)
-    public ResponseEntity<String> isDeviceValied(@PathVariable("imie") String imie,@PathVariable("latitude") String latitude,@PathVariable("longitude") String longitude,
-    		@PathVariable("time") String time) {
-       // List<Devices> devices= userService.findAllUsers();
-    	
-        if(imie == ""){
-            return new ResponseEntity<String>("Data Packet Has no imie", HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
-        }else{
-        return new ResponseEntity<String>("OK", HttpStatus.OK);
-        }
-    }
-    
+
     
     
     

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 4, 2017 3:35:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="central" name="com.websystique.springmvc.model.Customertype" optimistic-lock="version" table="customertype">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="table1col" type="string">
+      <column length="45" name="table1col"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="customerses" table="customers">
+      <key>
+        <column name="customertype" not-null="true"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Customers"/>
+    </set>
+  </class>
+</hibernate-mapping>

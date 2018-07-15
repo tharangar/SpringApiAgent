@@ -9,6 +9,8 @@ public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherSer
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[] { HelloWorldConfiguration.class };
+        // return new Class[] { AppConfig.class };
+	
     }
   
     @Override
@@ -26,5 +28,6 @@ public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherSer
     	Filter [] singleton = { new CORSFilter()};
     	return singleton;
     }
+
  
 }

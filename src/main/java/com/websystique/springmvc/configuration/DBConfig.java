@@ -11,7 +11,7 @@ import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import com.websystique.springmvc.model.Person;
+
 import com.websystique.springmvc.service.GPSTrackService;
 import com.websystique.springmvc.service.GPSTrackServiceImpl;
 @Configuration 
@@ -38,9 +38,9 @@ public class DBConfig {
 	public DataSource getDataSource() {
 	    BasicDataSource dataSource = new BasicDataSource();
 	    dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	    dataSource.setUrl("jdbc:mysql://localhost:3306/central");
-	    dataSource.setUsername("root");
-	    dataSource.setPassword("TR@NGS#123");
+	    dataSource.setUrl("jdbc:mysql://localhost:3306/rest");
+	    dataSource.setUsername("rest");
+	    dataSource.setPassword("rest");
 	    return dataSource;
 	}
 	

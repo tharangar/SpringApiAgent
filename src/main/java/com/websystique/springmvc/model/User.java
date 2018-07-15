@@ -6,23 +6,40 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "user")
 public class User {
 
-	private long id;
+	private int id;
 	
 	private String name;
 	
 	private int age;
 	
-	private double salary;
+	private int domain;
+	
+	private int customer;
+	
+	private int person;
+	
+	private int login;
 
 	public User(){
 		id=0;
 	}
 	
-	public User(long id, String name, int age, double salary){
+	public User(int id, String name, int age, int domain, int customer, int person, int login){
 		this.id = id;
 		this.name = name;
 		this.age = age;
-		this.salary = salary;
+		this.domain = domain;
+		this.customer = customer;
+		this.person = person;
+		this.login = login;
+	}
+
+	//User user = new User(0,"Sarah",51,1);
+	public User(int id, String name, int age, int login){
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.login = login;
 	}
 	
 	@XmlElement
@@ -30,7 +47,7 @@ public class User {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -53,12 +70,36 @@ public class User {
 	}
 
 	@XmlElement
-	public double getSalary() {
-		return salary;
+	public int getDomain() {
+		return domain;
 	}
 
-	public void setSalary(double salary) {
-		this.salary = salary;
+	public void setDomain(int domain) {
+		this.domain = domain;
+	}
+	@XmlElement
+	public int getCustomer() {
+		return customer;
+	}
+	
+	public void setCustomer(int customer) {
+		this.customer = customer;
+	}
+	@XmlElement
+	public int getPerson() {
+		return person;
+	}
+
+	public void setPerson(int person) {
+		this.person = person;
+	}
+	@XmlElement
+	public int getLogin() {
+		return login;
+	}
+
+	public void setLogin(int login) {
+		this.login = login;
 	}
 
 	@Override
@@ -86,7 +127,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", age=" + age
-				+ ", salary=" + salary + "]";
+				+ ", domain=" + domain +",customer="+customer+", person="+person+", login="+login+ "]";
 	}
 
 
