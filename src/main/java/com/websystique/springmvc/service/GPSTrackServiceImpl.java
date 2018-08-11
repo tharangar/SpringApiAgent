@@ -39,6 +39,10 @@ public class GPSTrackServiceImpl implements GPSTrackService{
 		sessionFactory.getCurrentSession().saveOrUpdate(data);
 		return data;
 	}
+
+
+
+
 	
 	
 

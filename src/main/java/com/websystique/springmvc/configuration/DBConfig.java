@@ -65,14 +65,14 @@ public class DBConfig {
 	
 	
 	// been configuration starts hear
-	
+	/**
 	@Autowired
 	@Bean(name = "gpsDao")
 	public GPSTrackService getUserDao(SessionFactory sessionFactory) {
 	    return new GPSTrackServiceImpl(sessionFactory);
 	}
 	
-	
+	**/
 	
 	
 }

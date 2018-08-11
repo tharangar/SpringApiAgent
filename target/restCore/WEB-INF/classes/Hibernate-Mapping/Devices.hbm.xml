@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 4, 2017 3:35:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="central" name="com.websystique.springmvc.model.Devices" optimistic-lock="version" table="devices">
+    <id name="id" type="string">
+      <column length="50" name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.websystique.springmvc.model.Objts" fetch="select" name="objts">
+      <column name="objects"/>
+    </many-to-one>
+    <property name="imei" type="string">
+      <column length="45" name="imei"/>
+    </property>
+    <property name="type" type="string">
+      <column length="45" name="type"/>
+    </property>
+    <property name="name" type="string">
+      <column length="45" name="name"/>
+    </property>
+    <property name="appid" type="string">
+      <column length="45" name="appid"/>
+    </property>
+    <property name="model" type="string">
+      <column length="50" name="model"/>
+    </property>
+    <property name="timezone" type="string">
+      <column length="45" name="timezone"/>
+    </property>
+    <property name="note" type="string">
+      <column length="45" name="note"/>
+    </property>
+    <property name="mobile" type="string">
+      <column length="45" name="mobile"/>
+    </property>
+    <property name="acc" type="string">
+      <column length="4" name="acc"/>
+    </property>
+    <property name="ngs" type="string">
+      <column length="45" name="ngs"/>
+    </property>
+    <property name="attachto" type="string">
+      <column length="4" name="attachto"/>
+    </property>
+    <property name="attachref" type="string">
+      <column length="4" name="attachref"/>
+    </property>
+    <property name="exlp1" type="string">
+      <column length="4" name="exlp1"/>
+    </property>
+    <property name="exlp2" type="string">
+      <column length="4" name="exlp2"/>
+    </property>
+    <property name="exlp3" type="string">
+      <column length="4" name="exlp3"/>
+    </property>
+    <property name="exlp4" type="string">
+      <column length="4" name="exlp4"/>
+    </property>
+    <property name="maker" type="string">
+      <column length="45" name="maker"/>
+    </property>
+    <property name="cal" type="string">
+      <column length="45" name="cal"/>
+    </property>
+    <property name="code" type="string">
+      <column length="45" name="code"/>
+    </property>
+    <property name="regtime" type="timestamp">
+      <column length="19" name="regtime"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="alarmses" table="alarms">
+      <key>
+        <column length="50" name="devices" not-null="true"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Alarms"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="milages" table="milage">
+      <key>
+        <column length="50" name="devices" not-null="true"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Milage"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="tracklogs" table="tracklog">
+      <key>
+        <column length="50" name="devices"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Tracklog"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="loginlogs" table="loginlog">
+      <key>
+        <column length="50" name="devices" not-null="true"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Loginlog"/>
+    </set>
+  </class>
+</hibernate-mapping>

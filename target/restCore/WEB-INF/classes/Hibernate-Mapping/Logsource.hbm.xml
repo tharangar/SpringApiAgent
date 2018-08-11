@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 4, 2017 3:35:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="central" name="com.websystique.springmvc.model.Logsource" optimistic-lock="version" table="logsource">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="ip" type="string">
+      <column length="45" name="ip"/>
+    </property>
+    <property name="username" type="string">
+      <column length="45" name="username"/>
+    </property>
+    <property name="password" type="string">
+      <column length="45" name="password"/>
+    </property>
+    <property name="type" type="string">
+      <column length="45" name="type"/>
+    </property>
+    <property name="status" type="java.lang.Integer">
+      <column name="status"/>
+    </property>
+    <property name="comment" type="string">
+      <column length="45" name="comment"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="tracklogs" table="tracklog">
+      <key>
+        <column name="logsource"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Tracklog"/>
+    </set>
+  </class>
+</hibernate-mapping>

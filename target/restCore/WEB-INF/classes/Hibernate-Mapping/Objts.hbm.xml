@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 4, 2017 3:35:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="central" name="com.websystique.springmvc.model.Objts" optimistic-lock="version" table="objts">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.websystique.springmvc.model.Customers" fetch="select" name="customers">
+      <column name="customer"/>
+    </many-to-one>
+    <many-to-one class="com.websystique.springmvc.model.Type" fetch="select" name="type">
+      <column name="type" not-null="true"/>
+    </many-to-one>
+    <property name="number" type="string">
+      <column length="45" name="number"/>
+    </property>
+    <property name="comment" type="string">
+      <column length="45" name="comment"/>
+    </property>
+    <property name="description" type="string">
+      <column length="45" name="description"/>
+    </property>
+    <property name="regtime" type="timestamp">
+      <column length="19" name="regtime"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="deviceses" table="devices">
+      <key>
+        <column name="objects"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Devices"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="imageses" table="images">
+      <key>
+        <column name="cars" not-null="true"/>
+      </key>
+      <one-to-many class="com.websystique.springmvc.model.Images"/>
+    </set>
+  </class>
+</hibernate-mapping>
