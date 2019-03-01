@@ -46,11 +46,53 @@
 
 ### Setup
 - Create a database "rest" in your localdata base
-- Create a user with privileges to this database username "rest" and password "rest".
+- Create a user with privileges to this database username "rest" and password "rest". (https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
+- CREATE USER 'rest'@'localhost' IDENTIFIED BY 'rest';
+- GRANT ALL PRIVILEGES ON * . * TO 'rest'@'localhost';
+- FLUSH PRIVILEGES;
 - use the rest.sql database dump file for importing the database to your local machine.
-- mysql -u root -psomepassword rest < rest.sql
+- mysql -u rest -psomepassword rest < rest.sql
+- Ex : mysql -u rest -prest rest < rest.sql
 
+- Donload and install code vs editor
 - Download and install maven first.
+- Install tomcat
+-  Ex : if you use mac and want to install tomcat 9 :#brew install tomcat@9
+OR
+https://www3.ntu.edu.sg/home/ehchua/programming/howto/MacUsers_HowTo.html
+
+// Download apache tomcat latest version and extract it and coppy to /Application folder
+
+tar xvf apache-tomcat-9.0.16.tar.gz 
+cp -rf apache-tomcat-9.0.16 /Applications
+// Rename the tomcat folder
+'''cp -rf apache-tomcat-9.0.16 tomcat9'''
+// Create a new user instead of root user to run tomcat
+'''sudo chown -R nobody:nobody /Applications/tomcat9'''
+'''cd /Applications/tomcat9
+// to start the tomcat
+sudo -u nobody ./bin/startup.sh
+sudo -u nobody ./bin/catalina.sh run
+sudo -u nobody ./bin/shutdown.sh
+
+$ sudo -u nobody ./startup.sh       // No console message
+$ sudo -u nobody ./catalina.sh run  // See console message
+
+// To stop tomcat
+$ sudo -u nobody ./shutdown.sh
+
+// to change user access to manage APP interface
+$sudo -u nobody nano ./conf/tomcat-users.xml
+
+//add following part
+<role rolename="manager-gui"/>
+<user username="tomcat" password="tomcat" roles="manager-gui"/>
+
+'''
+
+
+- opens the code vs editor from project folder
+- code .
 - change to the cloned directory
 - mvn compile
 - mvn test

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>SEEWAVE SpringApiAgent</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/app-resources/assets/css/main.css" />
@@ -26,7 +26,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>restCore</h1>
-								<p><!--[-->Design and Developed by Tharanga Rajapaksha <a href="https://html5up.net"> 
+								<p><!--[-->Design and Developed by Tharanga Rajapaksha <a href="http://www.seewave.org"> 
 								</p>
 							</div>
 						</div>
@@ -340,7 +340,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Future Network Holding: <a href="www.futurnetwork.lk">FNW</a>.</p>
+						<p class="copyright">&copy; SEEWAVE: <a href="www.futurnetwork.lk">SEEWAVE</a>.</p>
 					</footer>
 
 			</div>

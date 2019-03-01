@@ -59,4 +59,6 @@ public class XCoreUserTestSuite {
         urlConnection.setRequestProperty("Authorization", "Basic " + authStringEnc);
         return urlConnection;
     }
+
 }
+

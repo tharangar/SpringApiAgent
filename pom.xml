@@ -80,6 +80,14 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.1</version>
+		</dependency>
+
         
         <!-- apache commons codedc -->
 		<dependency>
@@ -112,15 +120,20 @@
 			<artifactId>spring-orm</artifactId>
 			<version>4.2.5.RELEASE</version>
 		</dependency>
-		
 
-		
-		 <dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
+		</dependency>
+	<!-->
+	  <dependency>
 		 <groupId>mysql</groupId>
 		 <artifactId>mysql-connector-java</artifactId>
 		 <version>5.1.31</version>
-	  </dependency>	  	  	
-
+	 </dependency>	  	  	
+   -->
 	    <dependency>
 		 <groupId>org.hibernate</groupId>
 		 <artifactId>hibernate-core</artifactId>
